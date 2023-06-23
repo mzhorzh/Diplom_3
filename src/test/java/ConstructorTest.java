@@ -7,6 +7,7 @@ import org.junit.Test;
 
 public class ConstructorTest extends Annotations {
     private String actualResult;
+
     @Test
     @DisplayName("Кейс проверки корректного перехода на вкладку Булки")
     @Description("Текст внутри конструктора должен соответствовать названию секции")

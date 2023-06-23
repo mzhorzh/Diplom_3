@@ -18,7 +18,7 @@ public class RegisterPageTest extends Annotations {
         LoginPage objLoginPage = new LoginPage();
         objLoginPage.registerButtonClick();
         RegisterPage objRegisterPage = new RegisterPage();
-        objRegisterPage.fillName(RandomStringUtils.randomAlphanumeric(8));
+        objRegisterPage.fillName(RandomStringUtils.randomAlphanumeric(10));
         objRegisterPage.fillEmail(RandomStringUtils.randomAlphanumeric(8) + "gmail.com");
         objRegisterPage.fillPassword(RandomStringUtils.randomAlphanumeric(6));
         objRegisterPage.registerButtonClick();
@@ -35,7 +35,7 @@ public class RegisterPageTest extends Annotations {
         LoginPage objLoginPage = new LoginPage();
         objLoginPage.registerButtonClick();
         RegisterPage objRegisterPage = new RegisterPage();
-        objRegisterPage.fillName(RandomStringUtils.randomAlphanumeric(8));
+        objRegisterPage.fillName(RandomStringUtils.randomAlphanumeric(10));
         objRegisterPage.fillEmail(RandomStringUtils.randomAlphanumeric(8) + "gmail.com");
         objRegisterPage.fillPassword(RandomStringUtils.randomAlphanumeric(5));
         objRegisterPage.registerButtonClick();

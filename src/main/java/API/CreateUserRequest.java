@@ -5,6 +5,7 @@ public class CreateUserRequest {
     private String password;
     private String name;
 
+    //Коонструктор для создания юзера
     public CreateUserRequest(String email, String password, String name) {
         this.email = email;
         this.password = password;

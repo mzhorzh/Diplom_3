@@ -58,7 +58,7 @@ public class OpenPersonalAccountTest extends Annotations {
     }
 
     @Test
-    @DisplayName("Переход на главную страницу  через кнопку Логотипа в хедере страницы")
+    @DisplayName("Переход на главную страницу  через Логотип в хедере страницы")
     @Description("Должна отобразиться Главная страница")
     public void goToHomePageByLogoClick() {
         userClient = new UserClient();

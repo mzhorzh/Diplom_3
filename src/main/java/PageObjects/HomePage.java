@@ -26,7 +26,7 @@ public class HomePage extends Driver {
         driver.findElement(personalAreaButton).click();
     }
 
-    @Step("Метод отображения списка ингредиентов конструктора")
+    @Step("Метод отображения списка ингредиентов в конструкторе")
     public boolean isDisplayedConstructor() {
         return driver.findElement(constructorList).isDisplayed();
     }

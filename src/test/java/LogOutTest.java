@@ -18,7 +18,7 @@ public class LogOutTest extends Annotations {
 
     @Test
     @DisplayName("Выход из аккаунта")
-    @Description("Должна отобразиться страница входа")
+    @Description("Должна отобразиться страница входа с формой ввода логина и пароля")
     public void logOutFromPersonalAreaTest() {
         userClient = new UserClient();
         createUserRequest = UserProvider.getRandomUser();

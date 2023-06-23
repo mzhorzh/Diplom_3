@@ -19,7 +19,7 @@ public class LoginTest extends Annotations {
 
     @Test
     @DisplayName("Вход через кнопку Войти в аккаунт в середине сайта")
-    @Description("После упешной авторизации,должен произойти редирект на главную страницу")
+    @Description("После упешной авторизации должен произойти редирект на главную страницу")
     public void loginWithLoginButtonTest() {
         userClient = new UserClient();
         createUserRequest = UserProvider.getRandomUser();
@@ -37,7 +37,7 @@ public class LoginTest extends Annotations {
 
     @Test
     @DisplayName("Вход через кнопку Личный кабинет")
-    @Description("После упешной авторизации,должен произойти редирект на главную страницу")
+    @Description("После упешной авторизации должен произойти редирект на главную страницу")
     public void loginWithPersonalAreaButtonTest() {
         userClient = new UserClient();
         createUserRequest = UserProvider.getRandomUser();
@@ -55,7 +55,7 @@ public class LoginTest extends Annotations {
 
     @Test
     @DisplayName("Вход через кнопку Войти на странице ррегистрации")
-    @Description("После упешной авторизации,должен произойти редирект на главную страницу")
+    @Description("После упешной авторизации должен произойти редирект на главную страницу")
     public void loginWithRegisterFormButtonTest() {
         userClient = new UserClient();
         createUserRequest = UserProvider.getRandomUser();
@@ -76,7 +76,7 @@ public class LoginTest extends Annotations {
 
     @Test
     @DisplayName("Вход через кнопку Войти на странице восстановления пароля")
-    @Description("После упешной авторизации,должен произойти редирект на главную страницу")
+    @Description("После упешной авторизации должен произойти редирект на главную страницу")
     public void loginWithForgotPasswordFormButtonTest() {
         userClient = new UserClient();
         createUserRequest = UserProvider.getRandomUser();

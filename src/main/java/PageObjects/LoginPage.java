@@ -12,7 +12,7 @@ public class LoginPage extends Driver {
     private final By forgotPasswordButton = By.xpath(".//a[text()='Восстановить пароль']");
     private final By loginPageLocator = By.xpath(".//main[@class='App_componentContainer__2JC2W']");
 
-    @Step("Заполнение формы входа")
+    @Step("Заполнение формы ввода логина/пароля")
     public void fillLoginForm(String email, String password) {
         driver.findElement(emailField).sendKeys(email);
         driver.findElement(passwordField).sendKeys(password);

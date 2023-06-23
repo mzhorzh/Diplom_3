@@ -5,6 +5,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
+//Создаем базового клиента
 public class BaseClient {
     protected RequestSpecification getSpec() {
         return new RequestSpecBuilder()

@@ -40,7 +40,7 @@ public class RegisterPage extends Driver {
         driver.findElement(loginButton).click();
     }
 
-    @Step("Метод отображения сообщения об ошибке")
+    @Step("Метод отображения сообщения об ошибке введенного пароля")
     public boolean passwordErrorMessageVisible() {
         return (driver.findElement(passwordErrorMessage).isDisplayed());
     }

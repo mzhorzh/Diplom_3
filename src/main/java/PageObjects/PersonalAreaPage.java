@@ -15,7 +15,7 @@ public class PersonalAreaPage extends Driver {
         driver.findElement(logoutButton).click();
     }
 
-    @Step("Метод отображения текста об изменении данных")
+    @Step("Метод отображения текста об изменении данных пользователя")
     public boolean isDisplayedText() {
         return driver.findElement(textInPersonalAreaPage).isDisplayed();
     }

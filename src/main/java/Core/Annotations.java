@@ -31,6 +31,7 @@ public abstract class Annotations extends Driver {
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
     }
 
+    //Закрываем браузер
     @After
     public void tearDown() {
         driver.quit();

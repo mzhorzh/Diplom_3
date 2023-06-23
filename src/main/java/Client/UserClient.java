@@ -7,6 +7,7 @@ import io.restassured.response.ValidatableResponse;
 import static io.restassured.RestAssured.given;
 
 public class UserClient extends BaseClient {
+    //Объявляем переменные для ручек API
     public static final String CREATE_URI="/api/auth/register";
     public static final String USER_DATA_URI ="/api/auth/user ";
 
