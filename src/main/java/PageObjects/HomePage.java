@@ -8,12 +8,9 @@ public class HomePage extends Driver {
     private final By loginButton = By.xpath(".//button[text()='Войти в аккаунт']");
     private final By personalAreaButton = By.xpath("//p[text()='Личный Кабинет']");
     private final By constructorList = By.className("BurgerIngredients_ingredients__menuContainer__Xu3Mo");
-    private final By bunsButton = By.xpath(".//span[text()='Булки']");
-    private final By saucesButton = By.xpath(".//span[text()='Соусы']");
-    private final By fillingsButton = By.xpath(".//span[text()='Начинки']");
-    private final By bunsText = By.xpath(".//h2[text()='Булки']");
-    private final By saucesText = By.xpath(".//h2[text()='Соусы']");
-    private final By fillingsText = By.xpath(".//h2[text()='Начинки']");
+    private final By bunsButton = By.xpath(".//div[@style]/div[1]");
+    private final By saucesButton = By.xpath(".//div[@style]/div[2]");
+    private final By fillingsButton = By.xpath(".//div[@style]/div[3]");
     private final By homePageLocator = By.xpath(".//main[@class='App_componentContainer__2JC2W']");
 
     @Step("Клик по кнопке Войти в аккаунт")
@@ -46,19 +43,19 @@ public class HomePage extends Driver {
         driver.findElement(fillingsButton).click();
     }
 
-    @Step("Получение названия секции Булки")
-    public String getTextBunsBlock() {
-        return driver.findElement(bunsText).getText();
+    @Step("Получить атрибут класса Булки")
+    public String getAttributeBuns() {
+        return driver.findElement(bunsButton).getAttribute("class");
     }
 
-    @Step("Получение названия секции Соусы")
-    public String getTextSaucesBlock() {
-        return driver.findElement(saucesText).getText();
+    @Step("Получить атрибут класса Соусы")
+    public String getAttributeSauces() {
+        return driver.findElement(saucesButton).getAttribute("class");
     }
 
-    @Step("Получение названия секции Начинки")
-    public String getTextFillingsBlock() {
-        return driver.findElement(fillingsText).getText();
+    @Step("Получить атрибут класса Начинки")
+    public String getAttributeFillings() {
+        return driver.findElement(fillingsButton).getAttribute("class");
     }
 
     @Step("Метод отображения главной страницы")

@@ -9,6 +9,7 @@ import PageObjects.RegisterPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -32,7 +33,6 @@ public class LoginTest extends Annotations {
         objLoginPage.loginButtonClick();
         boolean isVisibleHomePage = objHomePage.visibleHomePage();
         Assert.assertTrue(isVisibleHomePage);
-        userClient.deleteUser(accessToken);
     }
 
     @Test
@@ -50,7 +50,6 @@ public class LoginTest extends Annotations {
         objLoginPage.loginButtonClick();
         boolean isVisibleHomePage = objHomePage.visibleHomePage();
         Assert.assertTrue(isVisibleHomePage);
-        userClient.deleteUser(accessToken);
     }
 
     @Test
@@ -71,7 +70,6 @@ public class LoginTest extends Annotations {
         objLoginPage.loginButtonClick();
         boolean isVisibleHomePage = objHomePage.visibleHomePage();
         Assert.assertTrue(isVisibleHomePage);
-        userClient.deleteUser(accessToken);
     }
 
     @Test
@@ -92,6 +90,12 @@ public class LoginTest extends Annotations {
         objLoginPage.loginButtonClick();
         boolean isVisibleHomePage = objHomePage.visibleHomePage();
         Assert.assertTrue(isVisibleHomePage);
-        userClient.deleteUser(accessToken);
+    }
+
+    @After
+    public void deleteUer() {
+        if (accessToken != null) {
+            userClient.deleteUser(accessToken);
+        }
     }
 }

@@ -8,6 +8,7 @@ import PageObjects.PersonalAreaPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -33,7 +34,6 @@ public class OpenPersonalAccountTest extends Annotations {
         PersonalAreaPage objPersonalArea= new PersonalAreaPage();
         boolean isDisplayedTextInPersonalAreaPage = objPersonalArea.isDisplayedText();
         Assert.assertTrue(isDisplayedTextInPersonalAreaPage);
-        userClient.deleteUser(accessToken);
     }
 
     @Test
@@ -54,7 +54,6 @@ public class OpenPersonalAccountTest extends Annotations {
         objPersonalArea.constructorButtonClick();
         boolean isDisplayedConstructor = objHomePage.isDisplayedConstructor();
         Assert.assertTrue(isDisplayedConstructor);
-        userClient.deleteUser(accessToken);
     }
 
     @Test
@@ -75,6 +74,12 @@ public class OpenPersonalAccountTest extends Annotations {
         objPersonalArea.logoClick();
         boolean isDisplayedHomePage = objHomePage.visibleHomePage();
         Assert.assertTrue(isDisplayedHomePage);
-        userClient.deleteUser(accessToken);
+    }
+
+    @After
+    public void deleteUer() {
+        if (accessToken != null) {
+            userClient.deleteUser(accessToken);
+        }
     }
 }
